@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(1, 1fr) / repeat(6, 1fr);
+    background-color: rgb(156, 147, 147);
+    gap: 10px;
+    margin: 1rem;
+    place-items: center;
+}
+
+.dice-number1, .dice-number2, .dice-number3, .dice-number4, .dice-number5, .dice-number6 {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.dice-number1 {
+    display: grid;
+    grid-template-areas:
+    ". . ."
+    ". a ."
+    ". . .";
+}
+
+.dice-number2 {
+    display: grid;
+    grid-template-areas:
+    "a . ."
+    ". . ."
+    ". . b";
+}
+
+.dice-number3 {
+    display: grid;
+    grid-template-areas:
+    "a . ."
+    ". b ."
+    ". . c";
+}
+
+.dice-number4 {
+    display: grid;
+    grid-template-areas:
+    "a . c"
+    ". . ."
+    "d . b";
+}
+
+.dice-number5 {
+    display: grid;
+    grid-template-areas:
+    "a . c"
+    ". e ."
+    "d . b";
+}
+
+.dice-number6 {
+    display: grid;
+    grid-template-areas:
+    "a . c"
+    "e . f"
+    "d . b";
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.dot:nth-child(1) {
+    grid-area: a;
+}
+
+.dot:nth-child(2) {
+    grid-area: b;
+}
+.dot:nth-child(3) {
+    grid-area: c;
+}
+.dot:nth-child(4) {
+    grid-area: d;
+}
+.dot:nth-child(5) {
+    grid-area: e;
+}
+.dot:nth-child(6) {
+    grid-area: f;
+}
+
